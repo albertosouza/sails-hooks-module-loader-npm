@@ -6,13 +6,13 @@ Sails.js hook module loader to load modules from npm packages
 
 ## Installation
 
-1. Download it inside your sails.js project with:
+1 - Download it inside your sails.js project with:
 
 ```sh
 npm install sails-hooks-module-loader-npm --save
 ```
 
-2. Create one hook with:
+2 - Create one hook with:
 
 ```js
 // api/hooks/plugins/index.js
@@ -21,10 +21,24 @@ module.exports = require('sails-hooks-module-loader-npm').hook;
 
 ```
 
+## Plugin / sails npm module:
+
+### Plugin folder structure:
+
+ ```
+ - api
+ - - models
+ - - - [model1].js
+ - - - [model2].js
+ - - controllers
+ - - - [controller1].js
+ ```
 
 
-
-## Usage
 
 ## Credits
-[Alberto Souza](https://github.com/albertosouza/)
+[Alberto Souza](https://github.com/albertosouza/) and contributors
+
+## License
+
+MIT
