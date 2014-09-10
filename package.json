@@ -1,0 +1,35 @@
+{
+  "name": "sails-hooks-module-loader-npm",
+  "description": "Sails.js hook module loader to load modules from npm packages",
+  "version": "0.0.0",
+  "dependencies": {
+    "async": "^0.9.0",
+    "lodash": "^2.4.1",
+    "sails-build-dictionary": "^0.10.1",
+    "sails-util": "^0.10.4"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint .",
+    "checkStyle": "./node_modules/.bin/jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha test",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Alberto Souza <alberto.souza.dev@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "istanbul": "^0.2.7",
+    "jshint": "^2.5.0",
+    "jscs": "^1.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:albertosouza/sails-hooks-module-loader-npm.git"
+  }
+}
